@@ -5,7 +5,8 @@ class Settings(BaseSettings):
     PROJECT_NAME: str
     SECRET_KEY: str
     ALGORITHM: str
-    ACCESS_TOKEN_EXPIRE_MINUTES: str
+    ACCESS_TOKEN_EXPIRE_MINUTES: int
+    DATABASE_URL: str
 
     # .env 파일을 읽어오기 위한 설정
     model_config = SettingsConfigDict(env_file=".env")
