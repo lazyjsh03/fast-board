@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     DATABASE_URL: str
 
     # .env 파일을 읽어오기 위한 설정
-    model_config = SettingsConfigDict(env_file=".env")
+    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
 
 # 싱글톤 객체로 생성
